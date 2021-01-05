@@ -7,23 +7,31 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+protocol ProfileControllerDelegate {
+    func getUserProfileAndSaveData(handelData: Profile?)
+    func showErrorAlert(errorMessages: String)
+}
 
+class ProfileController: UIViewController {
+    private var viewModel = ProfileViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
+        viewModel.getUserProfile()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension ProfileController: ProfileControllerDelegate {
+    func getUserProfileAndSaveData(handelData: Profile?) {
+        guard let data = handelData else { return }
+        debugPrint("\(#function), \(data.email)")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showErrorAlert(errorMessages: String) {
+        let alert = UIAlertController(title: "Upss!", message: errorMessages, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
-    */
-
 }

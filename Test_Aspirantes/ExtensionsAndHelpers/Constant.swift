@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+enum EndPointUrl: String {
+    case authorization = "https://stage-api.cinepolis.com/v2/oauth/token"
+    case profile = "https://stage-api.cinepolis.com/v1/members/profile?country_code=MX"
+    case movies = "http://stage-api.cinepolis.com/v2/movies?country_code=MX&cinemas=61"
+}
+
+public let apiKey: String = "stage_HNYh3RaK_Test"

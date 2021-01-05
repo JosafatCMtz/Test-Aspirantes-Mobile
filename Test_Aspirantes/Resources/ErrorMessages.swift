@@ -6,3 +6,6 @@
 //
 
 import Foundation
+enum ErrorMessages: String, Error {
+    case invalidUser = "Ocurrió un error, por favor intenta más tarde."
+}

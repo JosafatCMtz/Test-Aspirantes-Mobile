@@ -3,18 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8018334125A3E3A100D29400 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8018334025A3E3A100D29400 /* Alamofire */; };
+		8018334625A3E3EC00D29400 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018334525A3E3EC00D29400 /* Authorization.swift */; };
+		8018334F25A3E56E00D29400 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8018334E25A3E56E00D29400 /* APIService.swift */; };
+		8040B0AB25A456490047E290 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0AA25A456490047E290 /* Defaults.swift */; };
+		8040B0B325A459C40047E290 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0B225A459C40047E290 /* Constant.swift */; };
+		8040B0B825A45EDB0047E290 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0B725A45EDB0047E290 /* Profile.swift */; };
+		8040B0BD25A45F220047E290 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0BC25A45F220047E290 /* ProfileViewModel.swift */; };
+		8040B0C225A45F4E0047E290 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0C125A45F4E0047E290 /* ProfileController.swift */; };
+		8040B0C725A460E50047E290 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0C625A460E50047E290 /* MoviesController.swift */; };
+		8040B0CC25A460FE0047E290 /* MovieDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0CB25A460FE0047E290 /* MovieDetailController.swift */; };
+		8040B0D125A4612B0047E290 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0D025A4612B0047E290 /* MoviesViewModel.swift */; };
+		8040B0D625A461370047E290 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0D525A461370047E290 /* Movies.swift */; };
+		807616A325A42BE700D0F1FC /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807616A225A42BE700D0F1FC /* AuthorizationViewModel.swift */; };
+		807616A825A434E000D0F1FC /* ValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807616A725A434E000D0F1FC /* ValidationExtension.swift */; };
+		807616B525A4472000D0F1FC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 807616B425A4472000D0F1FC /* Realm */; };
+		807616B725A4472000D0F1FC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 807616B625A4472000D0F1FC /* RealmSwift */; };
 		807C112D25A3850900E80869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C112C25A3850900E80869 /* AppDelegate.swift */; };
 		807C112F25A3850900E80869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C112E25A3850900E80869 /* SceneDelegate.swift */; };
-		807C113125A3850900E80869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C113025A3850900E80869 /* ViewController.swift */; };
+		807C113125A3850900E80869 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C113025A3850900E80869 /* LoginController.swift */; };
 		807C113425A3850900E80869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807C113225A3850900E80869 /* Main.storyboard */; };
 		807C113625A3850B00E80869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807C113525A3850B00E80869 /* Assets.xcassets */; };
 		807C113925A3850B00E80869 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807C113725A3850B00E80869 /* LaunchScreen.storyboard */; };
-		807C114425A3850B00E80869 /* Test_AspirantesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C114325A3850B00E80869 /* Test_AspirantesTests.swift */; };
-		807C114F25A3850B00E80869 /* Test_AspirantesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C114E25A3850B00E80869 /* Test_AspirantesUITests.swift */; };
+		807C114425A3850B00E80869 /* TestAspirantesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C114325A3850B00E80869 /* TestAspirantesTests.swift */; };
+		807C114F25A3850B00E80869 /* TestAspirantesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C114E25A3850B00E80869 /* TestAspirantesUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,19 +51,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8018334525A3E3EC00D29400 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		8018334E25A3E56E00D29400 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8040B0AA25A456490047E290 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		8040B0B225A459C40047E290 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8040B0B725A45EDB0047E290 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8040B0BC25A45F220047E290 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8040B0C125A45F4E0047E290 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		8040B0C625A460E50047E290 /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
+		8040B0CB25A460FE0047E290 /* MovieDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailController.swift; sourceTree = "<group>"; };
+		8040B0D025A4612B0047E290 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		8040B0D525A461370047E290 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movies.swift; path = Test_Aspirantes/ViewModels/Movies.swift; sourceTree = SOURCE_ROOT; };
+		807616A225A42BE700D0F1FC /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		807616A725A434E000D0F1FC /* ValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtension.swift; sourceTree = "<group>"; };
 		807C112925A3850900E80869 /* Test_Aspirantes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_Aspirantes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807C112C25A3850900E80869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807C112E25A3850900E80869 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		807C113025A3850900E80869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		807C113025A3850900E80869 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		807C113325A3850900E80869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		807C113525A3850B00E80869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807C113825A3850B00E80869 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807C113A25A3850B00E80869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807C113F25A3850B00E80869 /* Test_AspirantesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_AspirantesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		807C114325A3850B00E80869 /* Test_AspirantesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_AspirantesTests.swift; sourceTree = "<group>"; };
+		807C114325A3850B00E80869 /* TestAspirantesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAspirantesTests.swift; sourceTree = "<group>"; };
 		807C114525A3850B00E80869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		807C114A25A3850B00E80869 /* Test_AspirantesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_AspirantesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		807C114E25A3850B00E80869 /* Test_AspirantesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_AspirantesUITests.swift; sourceTree = "<group>"; };
+		807C114E25A3850B00E80869 /* TestAspirantesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAspirantesUITests.swift; sourceTree = "<group>"; };
 		807C115025A3850B00E80869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807616B725A4472000D0F1FC /* RealmSwift in Frameworks */,
+				807616B525A4472000D0F1FC /* Realm in Frameworks */,
+				8018334125A3E3A100D29400 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +108,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8018333D25A3E28600D29400 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				807C113225A3850900E80869 /* Main.storyboard */,
+				807C113725A3850B00E80869 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8018333E25A3E29600D29400 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				807C113525A3850B00E80869 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8018334A25A3E3F100D29400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8018334525A3E3EC00D29400 /* Authorization.swift */,
+				8040B0B725A45EDB0047E290 /* Profile.swift */,
+				8040B0D525A461370047E290 /* Movies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		807616AC25A435A900D0F1FC /* ExtensionsAndHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				8040B0AA25A456490047E290 /* Defaults.swift */,
+				807616A725A434E000D0F1FC /* ValidationExtension.swift */,
+				8040B0B225A459C40047E290 /* Constant.swift */,
+			);
+			path = ExtensionsAndHelpers;
+			sourceTree = "<group>";
+		};
 		807C112025A3850800E80869 = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +169,13 @@
 			isa = PBXGroup;
 			children = (
 				807C116625A3863800E80869 /* Controllers */,
+				8018334A25A3E3F100D29400 /* Models */,
 				807C116A25A3864E00E80869 /* ViewModels */,
 				807C116B25A3866200E80869 /* Services */,
 				807C116225A3862800E80869 /* Common */,
-				807C113225A3850900E80869 /* Main.storyboard */,
-				807C113525A3850B00E80869 /* Assets.xcassets */,
-				807C113725A3850B00E80869 /* LaunchScreen.storyboard */,
+				8018333D25A3E28600D29400 /* Storyboards */,
+				807616AC25A435A900D0F1FC /* ExtensionsAndHelpers */,
+				8018333E25A3E29600D29400 /* Resources */,
 				807C113A25A3850B00E80869 /* Info.plist */,
 			);
 			path = Test_Aspirantes;
@@ -114,7 +184,7 @@
 		807C114225A3850B00E80869 /* Test_AspirantesTests */ = {
 			isa = PBXGroup;
 			children = (
-				807C114325A3850B00E80869 /* Test_AspirantesTests.swift */,
+				807C114325A3850B00E80869 /* TestAspirantesTests.swift */,
 				807C114525A3850B00E80869 /* Info.plist */,
 			);
 			path = Test_AspirantesTests;
@@ -123,7 +193,7 @@
 		807C114D25A3850B00E80869 /* Test_AspirantesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				807C114E25A3850B00E80869 /* Test_AspirantesUITests.swift */,
+				807C114E25A3850B00E80869 /* TestAspirantesUITests.swift */,
 				807C115025A3850B00E80869 /* Info.plist */,
 			);
 			path = Test_AspirantesUITests;
@@ -141,7 +211,10 @@
 		807C116625A3863800E80869 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				807C113025A3850900E80869 /* ViewController.swift */,
+				807C113025A3850900E80869 /* LoginController.swift */,
+				8040B0C125A45F4E0047E290 /* ProfileController.swift */,
+				8040B0C625A460E50047E290 /* MoviesController.swift */,
+				8040B0CB25A460FE0047E290 /* MovieDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +222,9 @@
 		807C116A25A3864E00E80869 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				807616A225A42BE700D0F1FC /* AuthorizationViewModel.swift */,
+				8040B0BC25A45F220047E290 /* ProfileViewModel.swift */,
+				8040B0D025A4612B0047E290 /* MoviesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -156,6 +232,7 @@
 		807C116B25A3866200E80869 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8018334E25A3E56E00D29400 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,12 +247,18 @@
 				807C112525A3850900E80869 /* Sources */,
 				807C112625A3850900E80869 /* Frameworks */,
 				807C112725A3850900E80869 /* Resources */,
+				8018335325A3E60C00D29400 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Test_Aspirantes;
+			packageProductDependencies = (
+				8018334025A3E3A100D29400 /* Alamofire */,
+				807616B425A4472000D0F1FC /* Realm */,
+				807616B625A4472000D0F1FC /* RealmSwift */,
+			);
 			productName = Test_Aspirantes;
 			productReference = 807C112925A3850900E80869 /* Test_Aspirantes.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +330,10 @@
 				Base,
 			);
 			mainGroup = 807C112025A3850800E80869;
+			packageReferences = (
+				8018333F25A3E3A100D29400 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 807C112A25A3850900E80869 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,14 +372,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8018335325A3E60C00D29400 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		807C112525A3850900E80869 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807C113125A3850900E80869 /* ViewController.swift in Sources */,
+				807616A325A42BE700D0F1FC /* AuthorizationViewModel.swift in Sources */,
+				8040B0CC25A460FE0047E290 /* MovieDetailController.swift in Sources */,
+				8040B0B825A45EDB0047E290 /* Profile.swift in Sources */,
+				8040B0AB25A456490047E290 /* Defaults.swift in Sources */,
+				8040B0D125A4612B0047E290 /* MoviesViewModel.swift in Sources */,
+				8040B0B325A459C40047E290 /* Constant.swift in Sources */,
+				807C113125A3850900E80869 /* LoginController.swift in Sources */,
+				807616A825A434E000D0F1FC /* ValidationExtension.swift in Sources */,
+				8018334F25A3E56E00D29400 /* APIService.swift in Sources */,
+				8040B0BD25A45F220047E290 /* ProfileViewModel.swift in Sources */,
+				8040B0D625A461370047E290 /* Movies.swift in Sources */,
 				807C112D25A3850900E80869 /* AppDelegate.swift in Sources */,
 				807C112F25A3850900E80869 /* SceneDelegate.swift in Sources */,
+				8040B0C725A460E50047E290 /* MoviesController.swift in Sources */,
+				8018334625A3E3EC00D29400 /* Authorization.swift in Sources */,
+				8040B0C225A45F4E0047E290 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807C114425A3850B00E80869 /* Test_AspirantesTests.swift in Sources */,
+				807C114425A3850B00E80869 /* TestAspirantesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807C114F25A3850B00E80869 /* Test_AspirantesUITests.swift in Sources */,
+				807C114F25A3850B00E80869 /* TestAspirantesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +747,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8018333F25A3E3A100D29400 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+		807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8018334025A3E3A100D29400 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8018333F25A3E3A100D29400 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		807616B425A4472000D0F1FC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		807616B625A4472000D0F1FC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 807C112125A3850800E80869 /* Project object */;
 }
