@@ -29,6 +29,7 @@ class MoviesController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.getMovies()
+        activityIndicator.startAnimating()
         title = "Cartelera"
     }
 

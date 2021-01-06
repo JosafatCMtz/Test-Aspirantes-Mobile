@@ -33,7 +33,9 @@ final class LoginController: UIViewController {
         errorPasswordLabel.isHidden = hiddenPropertyForView
     }
 
-    fileprivate func generatingErrorMessagesOn(_ label: UILabel, hiddenPropertyForView hidden: Bool, errorMessage error: ValidationErrorMessages) {
+    fileprivate func generatingErrorMessagesOn(_ label: UILabel,
+                                               hiddenPropertyForView hidden: Bool,
+                                               errorMessage error: ValidationErrorMessages) {
         activityIndicatorView.hidesWhenStopped = true
         activityIndicatorView.stopAnimating()
         label.isHidden = hidden
@@ -56,19 +58,27 @@ final class LoginController: UIViewController {
         guard let username = userNameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         if username.isEmpty {
-            generatingErrorMessagesOn(errorUsernameLabel, hiddenPropertyForView: !hiddenPropertyForView, errorMessage: .emptyField)
+            generatingErrorMessagesOn(errorUsernameLabel,
+                                      hiddenPropertyForView: !hiddenPropertyForView,
+                                      errorMessage: .emptyField)
             return
         }
         if password.isEmpty {
-            generatingErrorMessagesOn(errorPasswordLabel, hiddenPropertyForView: !hiddenPropertyForView, errorMessage: .emptyField)
+            generatingErrorMessagesOn(errorPasswordLabel,
+                                      hiddenPropertyForView: !hiddenPropertyForView,
+                                      errorMessage: .emptyField)
             return
         }
         if !username.isEmail() {
-            generatingErrorMessagesOn(errorUsernameLabel, hiddenPropertyForView: !hiddenPropertyForView, errorMessage: .wrongEmail)
+            generatingErrorMessagesOn(errorUsernameLabel,
+                                      hiddenPropertyForView: !hiddenPropertyForView,
+                                      errorMessage: .wrongEmail)
             return
         }
         if password.length < 8 {
-            generatingErrorMessagesOn(errorPasswordLabel, hiddenPropertyForView: !hiddenPropertyForView, errorMessage: .veryShortPassword)
+            generatingErrorMessagesOn(errorPasswordLabel,
+                                      hiddenPropertyForView: !hiddenPropertyForView,
+                                      errorMessage: .veryShortPassword)
             return
         }
         viewModel.singin(with: username, password: password)
