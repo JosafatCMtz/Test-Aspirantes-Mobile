@@ -19,10 +19,10 @@
 		8040B0CC25A460FE0047E290 /* MovieDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0CB25A460FE0047E290 /* MovieDetailController.swift */; };
 		8040B0D125A4612B0047E290 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0D025A4612B0047E290 /* MoviesViewModel.swift */; };
 		8040B0D625A461370047E290 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8040B0D525A461370047E290 /* Movies.swift */; };
+		804E8CFD25A5548A00A49F78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804E8CFC25A5548A00A49F78 /* UIImageViewExtension.swift */; };
+		804E8D1B25A5912400A49F78 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804E8D1A25A5912400A49F78 /* MovieCollectionViewCell.swift */; };
 		807616A325A42BE700D0F1FC /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807616A225A42BE700D0F1FC /* AuthorizationViewModel.swift */; };
 		807616A825A434E000D0F1FC /* ValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807616A725A434E000D0F1FC /* ValidationExtension.swift */; };
-		807616B525A4472000D0F1FC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 807616B425A4472000D0F1FC /* Realm */; };
-		807616B725A4472000D0F1FC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 807616B625A4472000D0F1FC /* RealmSwift */; };
 		807C112D25A3850900E80869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C112C25A3850900E80869 /* AppDelegate.swift */; };
 		807C112F25A3850900E80869 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C112E25A3850900E80869 /* SceneDelegate.swift */; };
 		807C113125A3850900E80869 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807C113025A3850900E80869 /* LoginController.swift */; };
@@ -62,6 +62,8 @@
 		8040B0CB25A460FE0047E290 /* MovieDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailController.swift; sourceTree = "<group>"; };
 		8040B0D025A4612B0047E290 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		8040B0D525A461370047E290 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movies.swift; path = Test_Aspirantes/ViewModels/Movies.swift; sourceTree = SOURCE_ROOT; };
+		804E8CFC25A5548A00A49F78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		804E8D1A25A5912400A49F78 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		807616A225A42BE700D0F1FC /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		807616A725A434E000D0F1FC /* ValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtension.swift; sourceTree = "<group>"; };
 		807C112925A3850900E80869 /* Test_Aspirantes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_Aspirantes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				807616B725A4472000D0F1FC /* RealmSwift in Frameworks */,
-				807616B525A4472000D0F1FC /* Realm in Frameworks */,
 				8018334125A3E3A100D29400 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +141,7 @@
 				8040B0AA25A456490047E290 /* Defaults.swift */,
 				807616A725A434E000D0F1FC /* ValidationExtension.swift */,
 				8040B0B225A459C40047E290 /* Constant.swift */,
+				804E8CFC25A5548A00A49F78 /* UIImageViewExtension.swift */,
 			);
 			path = ExtensionsAndHelpers;
 			sourceTree = "<group>";
@@ -215,6 +216,7 @@
 				8040B0C125A45F4E0047E290 /* ProfileController.swift */,
 				8040B0C625A460E50047E290 /* MoviesController.swift */,
 				8040B0CB25A460FE0047E290 /* MovieDetailController.swift */,
+				804E8D1A25A5912400A49F78 /* MovieCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,8 +258,6 @@
 			name = Test_Aspirantes;
 			packageProductDependencies = (
 				8018334025A3E3A100D29400 /* Alamofire */,
-				807616B425A4472000D0F1FC /* Realm */,
-				807616B625A4472000D0F1FC /* RealmSwift */,
 			);
 			productName = Test_Aspirantes;
 			productReference = 807C112925A3850900E80869 /* Test_Aspirantes.app */;
@@ -332,7 +332,6 @@
 			mainGroup = 807C112025A3850800E80869;
 			packageReferences = (
 				8018333F25A3E3A100D29400 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 807C112A25A3850900E80869 /* Products */;
 			projectDirPath = "";
@@ -410,7 +409,9 @@
 				8040B0D625A461370047E290 /* Movies.swift in Sources */,
 				807C112D25A3850900E80869 /* AppDelegate.swift in Sources */,
 				807C112F25A3850900E80869 /* SceneDelegate.swift in Sources */,
+				804E8CFD25A5548A00A49F78 /* UIImageViewExtension.swift in Sources */,
 				8040B0C725A460E50047E290 /* MoviesController.swift in Sources */,
+				804E8D1B25A5912400A49F78 /* MovieCollectionViewCell.swift in Sources */,
 				8018334625A3E3EC00D29400 /* Authorization.swift in Sources */,
 				8040B0C225A45F4E0047E290 /* ProfileController.swift in Sources */,
 			);
@@ -757,14 +758,6 @@
 				minimumVersion = 5.2.0;
 			};
 		};
-		807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -772,16 +765,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8018333F25A3E3A100D29400 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		807616B425A4472000D0F1FC /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
-		};
-		807616B625A4472000D0F1FC /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 807616B325A4472000D0F1FC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

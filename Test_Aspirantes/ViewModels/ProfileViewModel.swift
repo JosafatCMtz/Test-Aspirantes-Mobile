@@ -18,9 +18,9 @@ class ProfileViewModel: ProfileViewModelDelegate {
         api.getProfileByUser { result in
             switch result {
             case let .success(profile):
-                debugPrint(profile.email)
+                self.delegate?.getUserProfileAndSaveData(handelData: profile)
             case let .failure(error):
-                debugPrint(error.rawValue)
+                self.delegate?.showErrorAlert(errorMessages: error.rawValue)
             }
         }
     }

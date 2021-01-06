@@ -24,7 +24,7 @@ public class APIService: NSObject {
         completion: @escaping (Result<Authorization, ErrorsApi>) -> Void) {
         let sourcesURL: EndPointUrl = .authorization
         let headers: HTTPHeaders = [
-            "api_key": apiKey,
+            "api_key": apiKey
         ]
         let parameters: [String: String] = [
             "country_code": "MX",
@@ -32,7 +32,7 @@ public class APIService: NSObject {
             "password": "\(password)",
             "grant_type": "password",
             "client_id": "IATestCandidate",
-            "client_secret": "c840457e777b4fee9b510fbcd4985b68",
+            "client_secret": "c840457e777b4fee9b510fbcd4985b68"
         ]
         AF.request(sourcesURL.rawValue,
                    method: .post,
@@ -55,7 +55,7 @@ public class APIService: NSObject {
     func getProfileByUser(completion: @escaping (Result<Profile, ErrorsApi>) -> Void) {
         let headers: HTTPHeaders = [
             "api_key": apiKey,
-            "Authorization": "Bearer \(Defaults.getUserDetailOf().accessToken)",
+            "Authorization": "Bearer \(Defaults.getUserDetailOf().accessToken)"
         ]
         let sourcesURL: EndPointUrl = .profile
         AF.request(sourcesURL.rawValue,
@@ -63,6 +63,28 @@ public class APIService: NSObject {
                    headers: headers)
             .validate()
             .responseDecodable(of: Profile.self) { response in
+                switch response.result {
+                case let .success(data):
+                    completion(.success(data))
+                case let .failure(error):
+                    completion(.failure(.invalidUser))
+                    guard let errorDescription = error.errorDescription else { return }
+                    debugPrint("Failure: \(errorDescription)")
+                }
+            }
+    }
+
+    func getMovies(completion: @escaping (Result<Movies, ErrorsApi>) -> Void) {
+        let headers: HTTPHeaders = [
+            "api_key": apiKey,
+            "Authorization": "Bearer \(Defaults.getUserDetailOf().accessToken)"
+        ]
+        let sourcesURL: EndPointUrl = .movies
+        AF.request(sourcesURL.rawValue,
+                   method: .get,
+                   headers: headers)
+            .validate()
+            .responseDecodable(of: Movies.self) { response in
                 switch response.result {
                 case let .success(data):
                     completion(.success(data))
