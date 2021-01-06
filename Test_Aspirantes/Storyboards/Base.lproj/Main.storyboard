@@ -92,6 +92,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DV9-Zl-OXW">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hn1-eu-777">
                                 <rect key="frame" x="16" y="60" width="382" height="737"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -152,17 +155,20 @@
                             <constraint firstItem="8q0-Ik-fAy" firstAttribute="bottom" secondItem="hn1-eu-777" secondAttribute="bottom" constant="16" id="66r-Q9-AJf"/>
                             <constraint firstItem="hn1-eu-777" firstAttribute="leading" secondItem="8q0-Ik-fAy" secondAttribute="leading" constant="16" id="Jh6-50-I4M"/>
                             <constraint firstItem="hn1-eu-777" firstAttribute="top" secondItem="8q0-Ik-fAy" secondAttribute="top" constant="16" id="KeN-Go-moR"/>
+                            <constraint firstItem="DV9-Zl-OXW" firstAttribute="centerY" secondItem="iuA-a5-AUa" secondAttribute="centerY" id="RfS-Y8-BUJ"/>
+                            <constraint firstItem="DV9-Zl-OXW" firstAttribute="centerX" secondItem="iuA-a5-AUa" secondAttribute="centerX" id="SIt-gj-X5R"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cartelera" image="video.fill" catalog="system" id="3rz-ZI-5ba"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="DV9-Zl-OXW" id="Ize-wI-APe"/>
                         <outlet property="moviesCollectionView" destination="hn1-eu-777" id="2tc-e7-gCW"/>
                         <segue destination="NiS-Db-HPr" kind="presentation" modalPresentationStyle="overFullScreen" id="RhW-bq-4Ju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLV-Ve-cLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="362"/>
+            <point key="canvasLocation" x="2162" y="78"/>
         </scene>
         <!--Movie Detail Controller-->
         <scene sceneID="2g4-uJ-vBB">
@@ -307,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbC-24-IBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="362"/>
+            <point key="canvasLocation" x="2945" y="78"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="Fvp-y8-grs">
@@ -385,6 +391,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEG-Nw-ujM">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="44.5"/>
                                                 <state key="normal" title="Buscar Tarjerta"/>
+                                                <connections>
+                                                    <action selector="didTapButtonCardSearch" destination="cpY-u0-w04" eventType="touchUpInside" id="S1E-cO-a4n"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdM-ah-jKo">
                                                 <rect key="frame" x="195" y="0.0" width="187" height="44.5"/>
@@ -421,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9m-6C-9pI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="-313"/>
+            <point key="canvasLocation" x="2162" y="-648"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GiW-ma-PKJ">
@@ -440,7 +449,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSd-Ic-3Sn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="78"/>
+            <point key="canvasLocation" x="1393" y="78"/>
         </scene>
     </scenes>
     <resources>

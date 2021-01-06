@@ -24,6 +24,11 @@ class ProfileController: UIViewController {
         title = "Perfil"
     }
 
+    @IBAction func didTapButtonCardSearch() {
+        let alert = UIAlertController(title: "Upss!", message: "Debido a un error de consumo de API no pude completar el paso de esta acción.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
     @IBAction func didTapLogOutButton() {
         let alert = UIAlertController(
             title: "Cerrar Sesión",

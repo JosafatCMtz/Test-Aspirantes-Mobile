@@ -24,6 +24,7 @@ class MoviesController: UIViewController {
     private var movies: [Movie] = []
     private var routes: [Route] = []
     @IBOutlet var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -61,6 +62,7 @@ extension MoviesController: MoviesControllerDelegate {
         let routes = data.routes
         self.movies = movies
         self.routes = routes
+        activityIndicator.stopAnimating()
         moviesCollectionView.reloadData()
     }
 
